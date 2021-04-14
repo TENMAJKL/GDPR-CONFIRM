@@ -1,0 +1,13 @@
+labels:
+  confirm:
+    §aClick to confirm GDPR
+  deny:
+    §4Click to deny GDPR
+  guiName:
+    §aGDPR confirmation
+  KickMessage:
+    §4You need to confirm GDPR to play here!
+  GDPRlink:
+    §6Document can be found here doo.ywx.cz
+
+confirmed:
