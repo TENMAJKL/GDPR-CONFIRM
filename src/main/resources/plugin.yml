@@ -1,0 +1,9 @@
+main: me.moravak.gdprconfirm.Main
+api-version: 1.13
+name: GDPRCONFIRM
+version: 1.0.0
+description: Simple gdpr confirmation plugin
+commands:
+  gdprconfirm:
+    description: confirms gdpr
+    usage: /gdprconfirm
