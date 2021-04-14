@@ -16,6 +16,7 @@ import java.util.List;
 public class Events implements Listener
 {
     private Plugin plugin = Main.getPlugin(Main.class);
+
     @EventHandler
     public void onJoin(PlayerJoinEvent e)
     {
@@ -26,20 +27,22 @@ public class Events implements Listener
             player.openInventory(Gui.createGui());
         }
     }
+
     @EventHandler
     public void onInvClick(InventoryClickEvent e)
     {
         if (e.getView().getTitle().equals("§4Confirm GDPR"))
         {
             Player player = (Player) e.getWhoClicked();
-            if( e.getCurrentItem() != null)
+            if(e.getCurrentItem() != null)
             {
                 if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§aClick to confirm GDPR"))
                 {
                     player.performCommand("gdprconfirm");
                     player.closeInventory();
 
-                } else if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§4Click to deny GDPR"))
+                }
+                else if (e.getCurrentItem().getItemMeta().getDisplayName().equals("§4Click to deny GDPR"))
                 {
                     player.kickPlayer("You need to confirm GDPR to play here");
                 }
@@ -48,6 +51,7 @@ public class Events implements Listener
             e.setCancelled(true);
         }
     }
+
     @EventHandler
     public void onInvClose(InventoryCloseEvent e)
     {
